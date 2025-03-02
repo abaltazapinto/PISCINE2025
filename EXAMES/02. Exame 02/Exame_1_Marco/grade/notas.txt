@@ -1,0 +1,7 @@
+1 - Pergunta:
+ft_countdown  ---> Correct 
+------ 10 points --------
+2 - Pergunta:
+rot_13 -----> Learned need to redo 
+3 - Pergunta:
+reverse_bits ---------> WRONG
