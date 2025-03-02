@@ -42,7 +42,7 @@ char	*ft_strcapitalize(char *str)
 	}
 	return (str);
 }
-
+/*
 #include <stdio.h>
 
 int main()
@@ -51,4 +51,4 @@ int main()
     printf("Original: %s\n", str);
     printf("Capitalizado: %s\n", ft_strcapitalize(str));
     return 0;
-}
+}*/
