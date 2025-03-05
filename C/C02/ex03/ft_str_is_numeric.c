@@ -1,30 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abaltaza <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/28 12:23:27 by abaltaza          #+#    #+#             */
+/*   Updated: 2022/10/03 08:41:19 by abaltaza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int	ft_str_is_numeric(char *str)
 {
-	int	c;
+	int	n;
 
-	c = 0;
-	while (str[c] != '\0')
+	n = 0;
+	if (str[0] == '\0')
 	{
-		if ((str[c] < '0' || str[c] > '9'))
+		return (1);
+	}
+	while (str[n] != '\0')
+	{
+		if ((str[n] >= '0' && str[n] <= '9'))
+			n++;
+		else
 			return (0);
-			c++;
 	}
 	return (1);
-}/*
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-int	main()
-{
-	char	*dest = "1234";
-	char *src = "ANDRE";
-	printf("A primeira string é: %s .\n\n", src);
-	printf("Se string so tiver numericos retornará 1 se nao retornara 0 ---> resposta : %d\n\n ", ft_str_is_numeric(src));
-	printf("A segunda string é: %s . \n\n", dest);
-	printf("a string so tiver numericos retornará 1 se nao retornara 0 ----> resposta: %d\n\n ", ft_str_is_numeric(dest));
-
-	return (0);
-}*/
-
+}

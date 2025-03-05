@@ -1,36 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abaltaza <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/29 09:54:44 by abaltaza          #+#    #+#             */
+/*   Updated: 2022/09/29 11:38:31 by abaltaza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 char	*ft_strlowcase(char *str)
 {
-	int	c;
+	int	i;
 
-	c = 0;
-	while (str[c] != '\0')
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (str[c] >= 'A' && str[c] <= 'Z')
+		if (str[i] >= 'A' && str[i] <= 'Z')
 		{
-			str[c] = str[c] + 32;
+			str[i] = str[i] + 32;
 		}
-		c++;
+		i++;
 	}
 	return (str);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-int	main()
-{
-      //imutaveis
-//	char	*dest = "ANDRE";
-//	char *src = "GRANDES e pequenas"; 
-
-	//MUTAVEIS
-	char dest[] = "andre";
-	char src[] = "ANDRE really?";
-	printf("letras todas grandes ficam pequenas: %s .\n\n", src);
-	printf("str_strupcase: %s\n\n ", ft_strlowcase(src));
-	printf("letras todas pequenas continuam pequenas:%s . \n\n", dest);
-	printf("str_upcase: %s\n\n ", ft_strlowcase(dest));
-	return (0);
-}*/

@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abaltaza <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/29 10:01:27 by abaltaza          #+#    #+#             */
+/*   Updated: 2022/10/03 08:44:51 by abaltaza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 char	*ft_strlowcase(char *str)
 {
@@ -35,20 +46,10 @@ char	*ft_strcapitalize(char *str)
 				&& (str[i] >= 'a' && str[i] <= 'z'))
 			{
 				str[i] -= 32;
-			}
+			}	
 		}
 		i++;
 		x++;
 	}
 	return (str);
 }
-/*
-#include <stdio.h>
-
-int main()
-{
-    char str[] = "ola, tudo bem? 42palavras quarenta-e-duas; cinquenta+e+um";
-    printf("Original: %s\n", str);
-    printf("Capitalizado: %s\n", ft_strcapitalize(str));
-    return 0;
-}*/

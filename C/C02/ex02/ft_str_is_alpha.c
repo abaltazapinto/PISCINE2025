@@ -1,34 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abaltaza <abaltaza@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/28 09:42:13 by abaltaza          #+#    #+#             */
+/*   Updated: 2022/10/04 09:38:19 by abaltaza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int	ft_str_is_alpha(char *str)
 {
-	int	c;
+	int	n;
 
-	c = 0;
-	while (*str != '\0')
+	n = 0;
+	if (str[n] == '\0')
 	{
-		if (!((str[c] >= 65 && str[c] <= 90)
-				|| (str[c] >= 97 && str[c] <= 122)))
-			return (1);
+		return (1);
+	}
+	while (str[n] != '\0')
+	{
+		if ((str[n] >= 'a' && str[n] <= 'z')
+			|| (str[n] >= 'A' && str[n] <= 'Z'))
+		{
+			n++;
+		}
 		else
 			return (0);
 	}
+	return (1);
 }
-/*
-
-	#include <stdio.h>
-	#include <stdlib.h>
-	#include <string.h>
-
-int	main()
-{
-	char	*dest = "1234$:";
-	char *src = "ANDRE";
-	printf("A primeira string é: %s .\n\n", src);
-	printf("Se string se tiver alfa-numericos retornará 1
-se nao retornara 0 : %d\n\n ", ft_str_is_alpha(src));
-	printf("A segunda string é: %s . \n\n", dest);
-	printf("a string se tiver alfa-numericos retornará 1
-se nao retornara 0 : %d\n\n", ft_str_is_alpha(dest));
-
-	return (0);
-}*/

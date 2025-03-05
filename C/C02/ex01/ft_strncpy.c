@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anbaltaz <anbaltaz@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: abaltaza <abaltaza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/01 16:01:50 by anbaltaz          #+#    #+#             */
-/*   Updated: 2025/03/02 16:02:13 by anbaltaz         ###   ########.fr       */
+/*   Created: 2022/09/28 08:52:00 by abaltaza          #+#    #+#             */
+/*   Updated: 2022/09/28 09:35:11 by abaltaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (i < n && src[i] != '\0')
@@ -27,34 +27,3 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-int	main()
-{
-	char	*dest;
-	unsigned int n = 4;
-	char *src = "ANDRE";
-
-	// Alocate memory para a dest ser grande o suf.
-	dest = (char *)malloc(sizeof(char) * (strlen(src) + 1));
-
-	if (dest == NULL)
-	{
-		printf("falhoou o armazenamento de memoria");
-		return 1;
-	}
-
-	src = "ANDRE";
-
-	printf("Original: %s\n", dest);
-	ft_strncpy(dest, src,n);
-	printf("copiado : %s\n", dest);
-
-	free(dest);
-
-	return (0);
-}
-*/

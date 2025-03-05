@@ -1,36 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abaltaza <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/28 14:19:36 by abaltaza          #+#    #+#             */
+/*   Updated: 2022/10/03 08:23:01 by abaltaza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int	ft_str_is_lowercase(char *str)
 {
-	int	i;
+	int	n;
 
-	i = 0;
-	if (str[i] == '\0')
+	n = 0;
+	if (str[0] == '\0')
 	{
 		return (1);
 	}
-	while (str[i] != '\0')
+	while (str[n] != '\0')
 	{
-		if (!(str[i] >= 'a' && str[i] <= 'z'))
+		if ((str[n] >= 'a' && str[n] <= 'z'))
+			n++;
+		else
 			return (0);
-		i++;
 	}
 	return (1);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-int	main()
-{
-	char	*dest = "andre";
-	char *src = "ANDRE";
-	printf("A primeira string é: %s .\n\n", src);
-	printf("Se string so tiver letras pequenas retornará 1 se nao 
-retornara 0 ---> resposta : %d\n\n ", ft_str_is_lowercase(src));
-	printf("A segunda string é: %s . \n\n", dest);
-	printf("a string so tiver letras pequenas retornará 1 se nao
- retornara 0 ----> resposta: %d\n\n ", ft_str_is_lowercase(dest));
-
-	return (0);
-}*/

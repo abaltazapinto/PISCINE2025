@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abaltaza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 11:01:51 by abaltaza          #+#    #+#             */
-/*   Updated: 2022/10/03 08:35:19 by abaltaza         ###   ########.fr       */
+/*   Created: 2022/10/03 08:58:59 by abaltaza          #+#    #+#             */
+/*   Updated: 2022/10/03 09:18:29 by abaltaza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *s)
+char	*ft_strupcase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
-{
-	unsigned int	i;
-	unsigned int	x;
-
-	x = ft_strlen(src);
-	i = 0;
-	if (size != 0)
+	while (str[i] != '\0')
 	{
-		while (src [i] != '\0' && i < size - 1)
-		{
-			dest[i] = src[i];
-			i++;
+		if (str[i] >= 'a' && str[i] <= 'z')
+		{	
+			str[i] = str[i] - 32;
 		}
-		dest[i] = '\0';
+		i++;
 	}
-	return (x);
+	return (str);
 }

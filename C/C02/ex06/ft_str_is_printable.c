@@ -1,31 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abaltaza <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/28 14:52:46 by abaltaza          #+#    #+#             */
+/*   Updated: 2022/09/28 15:11:08 by abaltaza         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	ft_is_printable(char *str)
+int	ft_str_is_printable(char *str)
 {
-	int	i;
+	int	n;
 
-	i = 0;
-	if (str[i] == '\0')
-		return (1);
-	while (str[i])
+	n = 0;
+	if (str[0] == '\0')
 	{
-		if (!(str[i] >= 32 && str[i] <= 126))
+		return (1);
+	}
+	while (str[n] != '\0')
+	{
+		if ((str[n] >= 32 && str[n] <= 127))
+			n++;
+		else
 			return (0);
-		i++;
 	}
 	return (1);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-int	main()
-{
-	char	*dest = "andre";
-	char *src = "ANDRE \t";
-	printf("A primeira string é printavel ? %s .\n\n", src);
-	printf("P r 1 != 0 a : %d\n\n ", ft_is_printable(src));
-	printf("A segunda string é printavel ? %s . \n\n", dest);
-	printf("P r 1 != 0 a: %d\n\n ", ft_is_printable(dest));
-	return (0);
-}*/
