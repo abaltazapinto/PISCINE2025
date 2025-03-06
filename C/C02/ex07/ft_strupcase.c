@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaltaza <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anbaltaz <anbaltaz@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 08:58:59 by abaltaza          #+#    #+#             */
-/*   Updated: 2022/10/03 09:18:29 by abaltaza         ###   ########.fr       */
+/*   Created: 2025/03/05 19:40:30 by anbaltaz          #+#    #+#             */
+/*   Updated: 2025/03/06 08:10:43 by anbaltaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strupcase(char *str)
 	while (str[i] != '\0')
 	{
 		if (str[i] >= 'a' && str[i] <= 'z')
-		{	
+		{
 			str[i] = str[i] - 32;
 		}
 		i++;
