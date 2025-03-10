@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaltaza <abaltaza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anbaltaz <anbaltaz@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/28 09:42:13 by abaltaza          #+#    #+#             */
-/*   Updated: 2022/10/04 09:38:19 by abaltaza         ###   ########.fr       */
+/*   Created: 2025/03/02 22:00:30 by anbaltaz          #+#    #+#             */
+/*   Updated: 2025/03/06 08:15:40 by anbaltaz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
