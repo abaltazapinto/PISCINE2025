@@ -24,3 +24,19 @@ char	*ft_strdup(char *src)
 	new[i] = '\0';
 	return (new);
 }
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char str[] = "42 Porto";
+    char *copy = ft_strdup(str);
+
+    if (copy)
+    {
+        printf("Original: %s\n", str);
+        printf("Cópia: %s\n", copy);
+        free(copy); // Libera a memória alocada
+    }
+    return 0;
+}
